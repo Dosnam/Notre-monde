@@ -1,0 +1,64 @@
+/* Styles pour la section des continents */
+#continent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centre les cartes horizontalement */
+    gap: 20px; /* Espace entre les cartes */
+    padding: 20px;
+}
+
+/* Styles pour chaque carte de continent */
+.continent-card {
+      border: 1px solid black;
+            background-color: rgba(250, 200, 200, 0.7); /* Fond légèrement transparent */
+            padding: 20px;
+            border-radius: 4px;
+            width: 300px; /* Largeur fixe pour chaque fiche */
+            text-align: center; /* Centre le contenu textuel */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Légère ombre pour un effet de profondeur */
+}
+
+.continent-card:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+}
+
+.continent-card h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.continent-card img {
+    max-width: 100%;
+    height: auto; /* Garde le ratio d'aspect */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.continent-card a {
+    display: inline-block;
+    background-color: #007bff; /* Couleur bleue */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.continent-card a:hover {
+    background-color: #0056b3;
+}
+
+/* Styles pour le message d'erreur */
+#erreur {
+    text-align: center;
+    color: #d9534f; /* Rouge */
+    font-size: 1.2em;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    border-radius: 5px;
+    display: none; /* Caché par défaut via JS */
+}

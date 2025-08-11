@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du pays</title>
+</head>
+<body>
+
+    <div id="country-details-container">
+        </div>
+
+    <script>
+        const countriesData = [
+            // Copiez ici tout  
+    { name: "Afghanistan", capital: "Kaboul", continent: "Asie", flag: "drapeaux/afghanistan.png" },
+    { name: "Afrique du Sud", capital: "Pretoria", continent: "Afrique", flag: "drapeaux/afrique du sud.png" },
+    { name: "Albanie", capital: "Tirana", continent: "Europe", flag: "drapeaux/albanie.png" },
+    { name: "Algérie", capital: "Alger", continent: "Afrique", flag: "drapeaux/algerie.png" },
+    { name: "Allemagne", capital: "Berlin", continent: "Europe", flag: "drapeaux/allemagne.png" },
+  
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const countryName = params.get('country');
+
+            if (countryName) {
+                // Recherche le pays correspondant dans le tableau
+                const country = countriesData.find(c => c.name === countryName);
+
+                if (country) {
+                    // Affiche les détails du pays
+                    const container = document.getElementById('country-details-container');
+                    container.innerHTML = `
+                        <h1>${country.name}</h1>
+                        <img src="${country.flag}" alt="Drapeau de ${country.name}" style="max-width: 200px;">
+                        <p>Capitale : ${country.capital}</p>
+                        <p>Continent : ${country.continent}</p>
+                        `;
+                } else {
+                    document.getElementById('country-details-container').innerHTML = "Pays non trouvé.";
+                }
+            } else {
+                document.getElementById('country-details-container').innerHTML = "Aucun pays spécifié dans l'URL.";
+            }
+        });
+    </script>
+
+</body>
+</html>

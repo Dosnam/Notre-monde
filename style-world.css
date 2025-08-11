@@ -1,0 +1,105 @@
+        
+      
+   /* Styles généraux pour l'en-tête et le pied de page */
+        .test {
+            background-color: lightblue;
+            padding: 19px;
+            text-align: center;
+            font-family: "Century Gothic", Verdana, sans-serif;
+            font-size: 20px;
+            color: white;
+            height: auto;
+            margin: -8px;
+            
+        }
+
+
+        /* Styles pour le conteneur principal des pays */
+        #grdsect {
+            background-color: #EFEFEF; /* Fond gris clair */
+            padding: 20px; /* Ajout de padding pour l'espace intérieur */
+            display: flex; /* Utilisation de flexbox pour l'alignement */
+            flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+            justify-content: center; /* Centre les éléments horizontalement */
+            gap: 20px; /* Espace entre les fiches de pays */
+            min-height: 500px; /* S'assurer qu'il y a toujours une hauteur minimale */
+        }
+
+        /* Styles pour chaque fiche de pays */
+        .country-card {
+            border: 1px solid black;
+            background-color: rgba(250, 200, 200, 0.7); /* Fond légèrement transparent */
+            padding: 20px;
+            border-radius: 4px;
+            width: 300px; /* Largeur fixe pour chaque fiche */
+            text-align: center; /* Centre le contenu textuel */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Légère ombre pour un effet de profondeur */
+        }
+
+        /* Style du titre du pays dans la fiche */
+        .country-card h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #333; /* Couleur de texte plus foncée pour le titre */
+        }
+
+        /* Style de l'image du drapeau */
+        .country-card .flag-img {
+            width: 150px;
+            height: 100px; /* Ajustement de la hauteur pour les drapeaux */
+            object-fit: cover; /* Assure que l'image couvre la zone sans déformation */
+            margin-bottom: 15px;
+            border: 1px solid #ddd; /* Petite bordure pour les drapeaux */
+        }
+
+        /* Styles pour le tableau d'informations */
+        .country-card table {
+            width: 100%;
+            margin-bottom: 15px;
+            border-collapse: collapse; /* Supprime les espacements entre les bordures de cellules */
+        }
+
+        .country-card table td {
+            padding: 5px 0;
+            text-align: left;
+            border-bottom: 1px dotted #ccc; /* Ligne pointillée entre les infos */
+        }
+
+        .country-card table td:first-child {
+            font-weight: bold;
+            width: 40%; /* Ajuste la largeur de la colonne "Capitale/Continent" */
+        }
+
+        /* Style du lien "Aller" */
+        .country-card .details-link {
+            display: inline-block; /* Permet d'appliquer padding et margins */
+            padding: 10px 20px;
+            background-color: #007bff; 
+            text-decoration: none;
+            color: white;
+            border-radius: 5px; /* Coins plus arrondis */
+            transition: background-color 0.3s ease; /* Transition douce au survol */
+        }
+
+        .country-card .details-link:hover {
+            background-color: seagreen; /* Changement de couleur au survol */
+        }
+
+        /* Styles pour la barre de recherche */
+        #search-input {
+            padding: 8px 15px;
+            border-radius: 5px;
+            border: none;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        /* Message si aucun pays n'est trouvé */
+        #no-results {
+            font-size: 1.2em;
+            color: #555;
+            text-align: center;
+            width: 100%; /* S'assure que le message est centré sur toute la largeur */
+            margin-top: 50px;
+            display: none; /* Caché par défaut */
+        }
